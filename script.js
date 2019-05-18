@@ -2,7 +2,11 @@
 // ключ доступа для API mailboxlayer.com
 let ACCESS_KEY = '29204408aa55754e1acab46a821db12a';
 
-// отправка запроса на проверку email
+/**
+ * отправка запроса на проверку email
+ *
+ * @param event - объект события onsubmit
+ */
 function verify(event) {
 
     event.preventDefault();
@@ -49,7 +53,9 @@ function verify(event) {
     xhr.send();
 }
 
-// отображение сообщения об ошибке
+/**
+ * отображение сообщения об ошибке
+ */
 function onError() {
 
     // контейнер текста результата
@@ -65,7 +71,9 @@ function onError() {
     element.classList.remove('hidden');
 }
 
-// при успешной проверке
+/**
+ *  при успешной проверке email
+ */
 function onSuccess() {
 
     // контейнер текста результата
@@ -81,19 +89,25 @@ function onSuccess() {
     element.classList.remove('hidden');
 }
 
-// обработчик ввода текста в инпут
+/**
+ * обработчик ввода текста в инпут
+ */
 function onInput() {
 
     // скроем отображение результата проверки
     document.getElementById('path_validation_result').classList.add('hidden');
 }
 
-// отображение прелоадера
+/**
+ * отображение прелоадера
+ */
 function showPreloader() {
     document.getElementById('path_preloader').classList.remove('display_none');
 }
 
-// скрытие прелоадера
+/**
+ * скрытие прелоадера
+ */
 function hidePreloader() {
     document.getElementById('path_preloader').classList.add('display_none');
 }
