@@ -8,5 +8,25 @@
 </head>
 <body>
 
+<form name="validation" class="email_form" onsubmit="verify(event)">
+
+    <div class="form_title">
+        Email Validation
+    </div>
+
+    <div class="email_input_wrap">
+        <div class="form_input_icon"></div>
+        <input id="path_email_input" oninput="onInput()" autocomplete="off" maxlength="80" class="form_input" placeholder="Example@mail.com">
+    </div>
+
+    <div class="info">
+        <div id="path_preloader" class="preloader_wrap display_none">
+            <div class="preloader"></div>
+        </div>
+        <div id="path_validation_result"  class="validation_result"></div>
+    </div>
+
+    <input type="submit" class="form_input_button" value="Verify">
+</form>
 </body>
 </html>
